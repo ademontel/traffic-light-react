@@ -10,18 +10,8 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-.onLightYellow{
-    -webkit-box-shadow: 0px 0px 79px 0px rgba(255,255,0,1);
-    -moz-box-shadow: 0px 0px 79px 0px rgba(255,255,0,1);
-    box-shadow: 0px 0px 79px 0px rgba(255,255,0,1);
-}
-.onLightRed{
-    -webkit-box-shadow: 0px 0px 79px 0px rgba(179,6,6,1);
-    -moz-box-shadow: 0px 0px 79px 0px rgba(179,6,6,1);
-    box-shadow: 0px 0px 79px 0px rgba(179,6,6,1);
-}
-.onLightGreen{
-    -webkit-box-shadow: 0px 0px 79px 0px rgba(8,135,52,1);
-    -moz-box-shadow: 0px 0px 79px 0px rgba(8,135,52,1);
-    box-shadow: 0px 0px 79px 0px rgba(8,135,52,1);
+.onLight{
+    -webkit-box-shadow: 0px 0px 141px 0px rgba(221,227,59,1);
+    -moz-box-shadow: 0px 0px 141px 0px rgba(221,227,59,1);
+    box-shadow: 0px 0px 141px 0px rgba(221,227,59,1);
 }
