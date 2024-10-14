@@ -3,12 +3,15 @@ import React, {useState} from "react";
 const TrafficLight = () => {
     const [colorSelected, setColorSelected] = useState("red");
     const [colorList, setColorList] = useState(['red','yellow','green']);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const generateColor = () => {
+        const hexColors = "0123456789ABCDEF"
+        let color = '#';
 
-    const toggleColor = () => {
-        const nextIndex = (currentIndex + 1) % colorList.length;
-        setColorSelected(colorList[nextIndex]); 
-        setCurrentIndex(nextIndex);
+        for (let i = 0; i < 6; i++){
+            color = color + hexColors[Math.floor(Math.random()*hexColors.length)];
+            console.log(colorList);
+        }
+        return color;
     }
 
     return (
@@ -19,8 +22,7 @@ const TrafficLight = () => {
                     colorList.map( (color, indexColor) => {
                         return (
                             <div key={indexColor} onClick={() => {
-                                setColorSelected(color);
-                                setCurrentIndex(indexColor);
+                                setColorSelected(color)
                                 }} 
                                 className={"rounded-circle " + (colorSelected==color ? "onLight":"")} 
                                 style={{width:"130px", height:"130px", backgroundColor: color}}></div>
@@ -30,11 +32,9 @@ const TrafficLight = () => {
             </div>
             <button className="btn btn-success mt-3" onClick={() => {
                 if (colorList.length < 4) {
-                    setColorList([...colorList, 'purple' ])
+                    setColorList([...colorList, generateColor() ])
                 }
             }}> Generate
-            </button>
-            <button className="btn btn-success mt-3" onClick={toggleColor}> Alternate
             </button>
         </div>
     );
